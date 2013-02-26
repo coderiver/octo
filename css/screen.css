@@ -73,14 +73,14 @@ a:hover { text-decoration: none; }
   .header .menu li { float: none; display: none; margin: 0; line-height: 43px; }
   .header .menu li:last-child a { border-color: #9dbbc6; border-radius: 0 0 5px 5px; }
   .header .menu a { border-left: 1px solid #9dbbc6; border-right: 1px solid #9dbbc6; border-bottom: 1px solid #cfd6db; text-align: center; background: #f8f8f8; padding: 0 9px; }
-  .header .menu .general { line-height: 44px; display: block; min-width: 149px; }
+  .header .menu .general { line-height: 44px; display: block; min-width: 149px; cursor: pointer; }
   .header .menu .general a { white-space: nowrap; color: #4f98bc; background: #f3f3f3; }
   .header .menu .general a:after { background: url('../img/icons-sc95efba130.png') 0 -2036px no-repeat; width: 9px; height: 8px; display: inline-block; content: ''; position: static; bottom: auto; left: auto; margin: 0 -7px 0 18px; }
-  .header .menu .general:after { position: absolute; background: url('../img/icons-sc95efba130.png') 0 -1579px no-repeat; width: 15px; height: 44px; right: 0; top: 0; content: ''; } }
-.header.open { z-index: 10; }
-.header.open ul { box-shadow: 0 2px 7px rgba(0, 0, 0, 0.45); }
-.header.open .general:after { background: url('../img/icons-sc95efba130.png') 0 -1020px no-repeat; width: 28px; height: 23px; right: -13px; }
-.header.open .general a { background: #f8f8f8; }
+  .header .menu .general:after { position: absolute; background: url('../img/icons-sc95efba130.png') 0 -1579px no-repeat; width: 15px; height: 44px; right: 0; top: 0; content: ''; }
+  .header .menu.open { z-index: 10; }
+  .header .menu.open ul { box-shadow: 0 2px 7px rgba(0, 0, 0, 0.45); }
+  .header .menu.open .general:after { background: url('../img/icons-sc95efba130.png') 0 -1020px no-repeat; width: 28px; height: 23px; right: -13px; }
+  .header .menu.open .general a { background: #f8f8f8; } }
 
 .category { float: left; margin: -1px 0 -1px 0; height: 100%; position: relative; }
 .category .category__selected { background: #627b89; border: 1px solid #566e7b; border-width: 1px 0; border-left: 3px solid #60b9e8; box-shadow: 1px 0 0 #415865 inset; position: relative; display: block; height: 44px; color: #fbfdfe; list-style: none; line-height: 42px; font-size: 24px; font-family: "Open Sans Bold", Arial, sans-serif; text-decoration: none; padding: 0 38px 0 48px; min-width: 132px; z-index: 1; }

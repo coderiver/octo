@@ -226,6 +226,7 @@ a{
 				line-height: 44px;
 				display: block;
 				min-width: 149px;
+				cursor: pointer;
 				a{
 					white-space: nowrap;
 					color:#4f98bc;
@@ -248,19 +249,20 @@ a{
 					content:'';
 				}
 			}
-		}
-	}
-	&.open{
-		z-index: 10;
-		ul{box-shadow:0 2px 7px rgba(0,0,0,.45);}
-		.general{
-			&:after{
-				@include sized-sprite($icons, 'category-drop2');
-				right: -13px;
+			&.open{
+				z-index: 10;
+				ul{box-shadow:0 2px 7px rgba(0,0,0,.45);}
+				.general{
+					&:after{
+						@include sized-sprite($icons, 'category-drop2');
+						right: -13px;
+					}
+					a{background: #f8f8f8;}
+				}
 			}
-			a{background: #f8f8f8;}
 		}
 	}
+	
 }
 .category{
 	float: left;
