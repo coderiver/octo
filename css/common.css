@@ -62,7 +62,7 @@ a:hover { text-decoration: none; }
 .nav .history:hover i, .nav .active .history i { background: url('../img/icons-sc95efba130.png') 0 -396px no-repeat; width: 32px; height: 28px; }
 
 .header { margin-left: 90px; background: #f3f3f3; border-bottom: 1px solid #bad1d9; border-top: 1px solid #98acb9; height: 44px; position: relative; z-index: 3; }
-.header .menu { float: left; }
+.header .menu { float: left; position: static; }
 .header .menu ul { padding-left: 4px; font-family: "Open Sans Semibold", Arial, sans-serif; }
 .header .menu li { list-style: none; float: left; line-height: 44px; font-size: 16px; color: #75838a; margin-left: 31px; }
 .header .menu a { text-decoration: none; color: #75838a; display: block; position: relative; }
@@ -80,6 +80,7 @@ a:hover { text-decoration: none; }
   .header .menu .general:after { position: absolute; background: url('../img/icons-sc95efba130.png') 0 -1579px no-repeat; width: 15px; height: 44px; right: 0; top: 0; content: ''; }
   .header .menu.open { z-index: 10; }
   .header .menu.open ul { box-shadow: 0 2px 7px rgba(0, 0, 0, 0.45); }
+  .header .menu.open li { display: block!important; }
   .header .menu.open .general:after { background: url('../img/icons-sc95efba130.png') 0 -1020px no-repeat; width: 28px; height: 23px; right: -13px; }
   .header .menu.open .general a { background: #f8f8f8; } }
 

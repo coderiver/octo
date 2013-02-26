@@ -32,21 +32,19 @@ $(document).ready(function() {
 
 	$('.menu .general').click(function() {
 		if ($(this).parent().css('position') === 'absolute'){
-				if ($(this).parent().parent().hasClass('open')) {
-				$(this).parent().parent().removeClass('open');
-				$(this).siblings('li').hide();
-			}
-			else{
-				$(this).parent().parent().addClass('open');
-				$(this).siblings('li').show();
-			}
+			if ($(this).parent().parent().hasClass('open')) {$(this).parent().parent().removeClass('open');}
+			else{$(this).parent().parent().addClass('open');}
 		}
+		else{$(this).parent().parent().removeClass('open');}
+	});
+
+	$('.menu li').click(function(){
+		if (!$(this).hasClass('general')){$(this).parent().parent().removeClass('open');}
 	});
 
 	jQuery(document).click( function(event){
 		if( $(event.target).closest(".menu .general").length )
 		return;
-		jQuery(".menu .general").siblings('li').hide();
 		$('.menu').removeClass('open');
 		event.stopPropagation();
 	});

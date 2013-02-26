@@ -162,9 +162,9 @@ a{
 	z-index: 3;
 	.menu{
 		float: left;
+		position: static;
 		ul{
 			padding-left: 4px;
-			
 			font-family:"Open Sans Semibold", Arial, sans-serif;
 		}
 		li{
@@ -253,6 +253,7 @@ a{
 			&.open{
 				z-index: 10;
 				ul{box-shadow:0 2px 7px rgba(0,0,0,.45);}
+				li{display: block!important;}
 				.general{
 					&:after{
 						@include sized-sprite($icons, 'category-drop2');
