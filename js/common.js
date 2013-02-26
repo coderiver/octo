@@ -29,14 +29,17 @@ $(document).ready(function() {
 		$('.category__selected').removeClass('category__selected_open');
 		return false;
 	});
+
 	$('.menu .general').click(function() {
-		if ($(this).parent().parent().hasClass('open')) {
-			$(this).parent().parent().removeClass('open');
-			$(this).siblings('li').hide();
-		}
-		else{
-			$(this).parent().parent().addClass('open');
-			$(this).siblings('li').show();
+		if ($(this).parent().css('position') === 'absolute'){
+				if ($(this).parent().parent().hasClass('open')) {
+				$(this).parent().parent().removeClass('open');
+				$(this).siblings('li').hide();
+			}
+			else{
+				$(this).parent().parent().addClass('open');
+				$(this).siblings('li').show();
+			}
 		}
 	});
 

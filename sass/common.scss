@@ -221,6 +221,7 @@ a{
 				text-align: center;
 				background: #f8f8f8;
 				padding: 0 9px;
+				&:after{display:none;}
 			}
 			.general{
 				line-height: 44px;

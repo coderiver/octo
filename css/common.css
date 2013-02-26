@@ -73,6 +73,7 @@ a:hover { text-decoration: none; }
   .header .menu li { float: none; display: none; margin: 0; line-height: 43px; }
   .header .menu li:last-child a { border-color: #9dbbc6; border-radius: 0 0 5px 5px; }
   .header .menu a { border-left: 1px solid #9dbbc6; border-right: 1px solid #9dbbc6; border-bottom: 1px solid #cfd6db; text-align: center; background: #f8f8f8; padding: 0 9px; }
+  .header .menu a:after { display: none; }
   .header .menu .general { line-height: 44px; display: block; min-width: 149px; cursor: pointer; }
   .header .menu .general a { white-space: nowrap; color: #4f98bc; background: #f3f3f3; }
   .header .menu .general a:after { background: url('../img/icons-sc95efba130.png') 0 -2036px no-repeat; width: 9px; height: 8px; display: inline-block; content: ''; position: static; bottom: auto; left: auto; margin: 0 -7px 0 18px; }
