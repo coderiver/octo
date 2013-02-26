@@ -49,12 +49,15 @@ a{
 	}
 }
 .out{
-	width: 1440px;
+	//width: 1440px;
 	margin: 0 auto;
 	background: #627b89 url(../img/bg-sidebar.png) repeat-y;
 	min-height: 100%;
 	position: relative;
 	@extend %clr;
+	@include respond-to(pda) {
+		width: 900px;
+	}
 }
 .sidebar{
 	float: left;
@@ -158,14 +161,19 @@ a{
 	position: relative;
 	z-index: 3;
 	.menu{
-		font-family:"Open Sans Semibold", Arial, sans-serif;
+		float: left;
+		ul{
+			padding-left: 4px;
+			
+			font-family:"Open Sans Semibold", Arial, sans-serif;
+		}
 		li{
 			list-style: none;
 			float: left;
 			line-height: 44px;
 			font-size: 16px;
 			color:#75838a;
-			margin-right: 31px;
+			margin-left: 31px;
 		}
 		a{
 			text-decoration: none;
@@ -186,11 +194,77 @@ a{
 				margin-left: -6px;
 			}
 		}
+		@include respond-to(mid) {
+			float: left;
+			position: relative;
+			margin-left: -14px;
+			ul{
+				display: inline-block;
+				padding: 0;
+				position: absolute;
+				border-radius: 0 0 5px 5px;
+			}
+			li{
+				float: none;
+				display: none;
+				margin: 0;
+				line-height: 43px;
+				&:last-child a{
+					border-color:#9dbbc6;
+					border-radius: 0 0 5px 5px;
+				}
+			}
+			a{
+				border-left:1px solid #9dbbc6;
+				border-right:1px solid #9dbbc6;
+				border-bottom:1px solid #cfd6db;
+				text-align: center;
+				background: #f8f8f8;
+				padding: 0 9px;
+			}
+			.general{
+				line-height: 44px;
+				display: block;
+				min-width: 149px;
+				a{
+					white-space: nowrap;
+					color:#4f98bc;
+					background: #f3f3f3;
+				}
+				& a:after{
+					@include sized-sprite($icons, 'arr_b5');
+					display: inline-block;
+					content:'';
+					position: static;
+					bottom: auto;
+					left: auto;
+					margin: 0 -7px 0 18px;
+				}
+				&:after{
+					position: absolute;
+					@include sized-sprite($icons, 'category-arr2');
+					right: 0;
+					top:0;
+					content:'';
+				}
+			}
+		}
+	}
+	&.open{
+		z-index: 10;
+		ul{box-shadow:0 2px 7px rgba(0,0,0,.45);}
+		.general{
+			&:after{
+				@include sized-sprite($icons, 'category-drop2');
+				right: -13px;
+			}
+			a{background: #f8f8f8;}
+		}
 	}
 }
 .category{
 	float: left;
-	margin: -1px 35px -1px 0;
+	margin: -1px 0 -1px 0;
 	height: 100%;
 	position: relative;
 	$ico : flag, lock, mess;
@@ -211,6 +285,7 @@ a{
 		text-decoration: none;
 		padding: 0 38px 0 48px;
 		min-width: 132px;
+		z-index: 1;
 		&:after{
 			content:'';
 			position: absolute;
