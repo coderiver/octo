@@ -233,7 +233,7 @@ a:hover { text-decoration: none; }
 
 .btn_num { padding: 0 13px 0 15px; }
 
-.t { padding-bottom: 10px; }
+.t { width: 1330px; padding-bottom: 10px; }
 .t .t__col1 { width: 37px; }
 .t .t__col1 input { vertical-align: middle; }
 .t .t__col2 { text-align: left; padding: 0 9px; width: 143px; }
