@@ -51,7 +51,7 @@ a{
 .out{
 	//width: 1440px;
 	margin: 0 auto;
-	background: #627b89 url(../img/bg-sidebar.png) repeat-y;
+	background: #627b89 url(../images/bg-sidebar.png) repeat-y;
 	min-height: 100%;
 	position: relative;
 	@extend %clr;
@@ -944,7 +944,7 @@ a{
 	.t__y{
 		height: 20px;
 		font-size: 12px;
-		background: url(../img/bg-t.png);
+		background: url(../images/bg-t.png);
 		font-family: "Open Sans Bold", Arial, sans-serif;
 	}
 	.t__arrows{

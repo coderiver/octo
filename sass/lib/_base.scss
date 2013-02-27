@@ -89,7 +89,7 @@ $break-3: 1180px;
 }
 
 @mixin gray(){
-  filter: url(../img/filter.svg#grayscale);
+  filter: url(../images/filter.svg#grayscale);
   filter: gray;
   -o-filter: grayscale(100%);
   -webkit-filter: grayscale(100%);

@@ -4,7 +4,7 @@
 http_path = "/"
 css_dir = "css"
 sass_dir = "sass"
-images_dir = "img"
+images_dir = "images"
 javascripts_dir = "js"
 relative_assets = true
 
@@ -22,7 +22,7 @@ preferred_syntax = :scss
 module Sass::Script::Functions
   def image_path(string)
     assert_type string, :String
-    Sass::Script::String.new("../img/#{string.value}")
+    Sass::Script::String.new("../images/#{string.value}")
   end
   alias_method :"image-path",:image_path 
   declare :"image-path", :args => [:string]
