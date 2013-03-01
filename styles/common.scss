@@ -454,7 +454,8 @@ a{
 	text-shadow:0 1px 0 rgba(white,.75);
 	height: 44px;
 	line-height: 40px;
-	padding: 0 0 0 17px;
+	margin: 0 0 0 17px;
+	cursor: pointer;
 	.top-profile__arr{
 		@include sized-sprite($icons, 'arr_b3');
 		display: inline-block;
@@ -548,6 +549,7 @@ a{
 	line-height: 40px;
 	height: 40px;
 	margin:0 24px 0 15px;
+	cursor: pointer;
 	.date-interval{
 		color:#3c4a53;
 		font-weight: normal;
@@ -889,8 +891,7 @@ a{
 		}
 	.t__col2{
 		text-align: left;
-		padding: 0 9px;
-		width: 161px - 18px;
+		width: 161px;
 		}
 	.t__col3{width: 160px;}
 	.t__col4{width: 159px;}
@@ -921,8 +922,13 @@ a{
 	}
 	.t__col2{
 		height: 49px;
-		div{position: relative;}
-		.t__arrows{right:2px;}
+		.t__arrows{
+			right:11px;
+			height: 22px;
+			margin-top: -11px;
+			top: 50%;
+			width: 8px;
+			}
 		}
 	.t__col9{
 		height: 49px;
@@ -937,9 +943,6 @@ a{
 	}
 	.t__col9, .t__col10{
 		text-align: left;
-		width: 84px - 18px;
-		padding:0 9px;
-		div{position: relative;}
 	}
 	.t__y{
 		height: 20px;
@@ -951,7 +954,11 @@ a{
 		display: inline-block;
 		vertical-align: middle;
 		position: absolute;
-		right: -1px;
+		right: 8px;
+		height: 18px;
+		margin-top: -9px;
+		top: 50%;
+		width: 6px;
 		span{
 			cursor: pointer;
 			display: block;
@@ -961,6 +968,13 @@ a{
 		.t__arr_b{@include sized-sprite($icons, 't-arr_b');}
 		.t__arr_t2{@include sized-sprite($icons, 't-arr_t2');}
 		.t__arr_b2{@include sized-sprite($icons, 't-arr_b2');}
+	}
+	.t_switch{
+		height: 100%;
+		line-height: 49px;
+		position: relative;
+		padding:0 9px;
+		cursor: pointer;
 	}
 }
 .t_body{
@@ -980,6 +994,10 @@ a{
 		font-family:"Open Sans Semibold", Arial, sans-serif;
 		border-left:0;
 		width: 36px;
+	}
+	.t__col2{
+		padding: 0 9px;
+		width: 161px - 18px;
 	}
 	.t__col9{
 		font-family:"Open Sans Semibold", Arial, sans-serif;
