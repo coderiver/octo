@@ -1,0 +1,11 @@
+<td class="t__col1">
+	<input type="checkbox" class="checkbox" role="checkbox">
+</td>
+<td class="t__col2"><%= name %></td>
+
+<% for (var i = 0; i < data.length; i++) { %>
+	<% var cell = data[i]; %>
+	<td>
+		<%= numFormat(cell[1]) %>
+	</td>
+<% } %>

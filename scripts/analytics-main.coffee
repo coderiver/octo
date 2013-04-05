@@ -1,9 +1,12 @@
 define (require) ->
+	require 'jquery_role'
 
-	ChartModel = require 'models/chart'
-	ChartView = require 'views/chart'
+	AnalyticsView = require 'views/AnalyticsView'
+	AnalyticsModel = require 'models/AnalyticsModel'
 
-	chartModel = new ChartModel()
-	chartView = new ChartView model: chartModel
-	chartView.render()
+
+	new AnalyticsView
+		el: '@analytics'
+		model: new AnalyticsModel()
+		autoRender: true
 

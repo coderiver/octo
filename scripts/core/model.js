@@ -1,9 +1,10 @@
 define(function (require) {
 	'use strict';
 
-	var _ = require('_');
-	var Backbone = require('Backbone');
-	var eventBrokerMixin = require('event-broker-mixin');
+	var Backbone = require('backbone');
+	var _ = require('underscore');
+	var eventBrokerMixin = require('./event-broker');
+
 
 	var Model = Backbone.Model.extend({
 

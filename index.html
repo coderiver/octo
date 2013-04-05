@@ -5,317 +5,551 @@
 	<meta charset="utf-8">
 	<title>Template</title>
 	<link rel="stylesheet" media="screen" href="styles/screen.css" >
-	<script src="js/jquery.tools.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/baron.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
-
 <!-- BEGIN  out-->
-<div class="out">
-	<!-- BEGIN  sidebar-->
-	<div class="sidebar">
-		<strong class="logo"><a href="#"></a></strong>
-		<ul class="nav">
-			<li><a href="#" class="dasher"><i></i><strong>DASHBOARD</strong></a></li>
-			<li class="active"><a href="#" class="analytics"><i></i><strong>Аналитика</strong></a></li>
-			<li><a href="#" class="company"><i></i><strong>Кампании</strong></a></li>
-			<li><a href="#" class="sites"><i></i><strong>Площадки</strong></a></li>
-			<li><a href="#" class="support"><i></i><strong>Поддержка</strong><span class="mess_num">2</span></a></li>
-			<li><a href="#" class="history"><i></i><strong>Журнал</strong></a></li>
-		</ul>
-		<div class="lang"></div>
-	</div>
-	<!-- END sidebar-->
+<div class="out" role="analytics">
+<!-- BEGIN  sidebar-->
+<div class="sidebar">
+	<strong class="logo"><a href="#"></a></strong>
+	<ul class="nav">
+		<li><a href="#" class="dasher"><i></i><strong>DASHBOARD</strong></a></li>
+		<li class="active"><a href="#" class="analytics"><i></i><strong>Аналитика</strong></a></li>
+		<li><a href="#" class="company"><i></i><strong>Кампании</strong></a></li>
+		<li><a href="#" class="sites"><i></i><strong>Площадки</strong></a></li>
+		<li><a href="#" class="support"><i></i><strong>Поддержка</strong><span class="mess_num">2</span></a></li>
+		<li><a href="#" class="history"><i></i><strong>Журнал</strong></a></li>
+	</ul>
+	<div class="lang"></div>
+</div>
+<!-- END sidebar-->
 
-	<!-- BEGIN  header-->
-	<div class="header">
-		<div class="category">
-			<a class="category__selected" href="#">
-				<span><i class="i_flag"></i>Кампании</span>
+<!-- BEGIN  header-->
+<div class="header">
+	<div role="menu">
+		<div class="category" role="category">
+			<a class="category__selected" href="#" role="toggle">
+				<span data-name="campaigns">
+					<i class="i_flag"></i>Кампании
+				</span>
 				<div class="category__arr"></div>
 			</a>
 			<div  class="category__drop">
 				<div class="category__drop-t"></div>
 				<ul class="category__list">
-					<li><a href="#">
-						<i class="i_lock"></i>
-						Объявления
-					</a></li>
-					<li><a href="#">
-						<i class="i_mess"></i>
-						Площадки
-					</a></li>
+					<li>
+						<span data-name="ads">
+							<i class="i_lock"></i>Объявления
+						</span>
+					</li>
+					<li>
+						<span data-name="sites">
+							<i class="i_mess"></i>Площадки
+						</span>
+					</li>
 				</ul>
 			</div>
 		</div>
+
 		<div class="menu">
-			<ul>
-				<li class="active general"><a href="#">Общее</a></li>
-				<li><a href="#">Страны</a></li>
-				<li><a href="#">Операторы</a></li>
-				<li><a href="#">Платформы</a></li>
-				<li><a href="#">Производители</a></li>
+			<ul role="subcategory">
+				<li class="active general" data-name="common"><a href="#">Общее</a></li>
+				<li data-name="counties"><a href="#">Страны</a></li>
+				<li data-name="operators"><a href="#">Операторы</a></li>
+				<li data-name="platforms"><a href="#">Платформы</a></li>
+				<li data-name="producers"><a href="#">Производители</a></li>
 			</ul>
 		</div>
-
-		<a href="#" class="notification">
-			<i class="notification__icon"></i>
-			<span class="notification__num">5</span>
-		</a>
-		<div class="top-profile">
-			<div class="top-profile__arr"></div>
-			<span class="top-profile__email">alexeykomarov@gmail.com</span>
-		</div>
-		<div class="devider"></div>
-		<div class="help">
-			<a href="#" class="help__icon">?</a>
-		</div>
 	</div>
-	<!-- END header-->
 
-	
+	<a href="#" class="notification">
+		<i class="notification__icon"></i>
+		<span class="notification__num">5</span>
+	</a>
+	<div class="top-profile">
+		<div class="top-profile__arr"></div>
+		<span class="top-profile__email">alexeykomarov@gmail.com</span>
+	</div>
+	<div class="devider"></div>
+	<div class="help">
+		<a href="#" class="help__icon">?</a>
+	</div>
+</div>
+<!-- END header-->
 
-	<!-- BEGIN  main-->
-	<div class="main">
-		<!-- BEGIN .chart -->
-		<div class="chart">
 
-			<!-- BEGIN .chart__top -->
-			<div class="chart__top">
-				<ul class="data-menu">
-					<li class="active"><a href="#" class="data-menu__item1">Просмотры</a></li>
-					<li><a href="#" class="data-menu__item2">Переходы</a></li>
-					<li><a href="#" class="data-menu__item3">CTR</a></li>
-					<li><a href="#" class="data-menu__item4">Расходы</a></li>
-				</ul>
-				<div class="select-date">
-					<span class="i_calendar"></span>
-					<strong class="date-interval">01.10.12 - 01.03.13</strong>
-				</div>
-				<div class="devider"></div>
-				<ul class="date-menu">
-					<li class="active"><a href="#">Сегодня</a></li>
-					<li><a href="#">Вчера</a></li>
-					<li><a href="#">Неделя</a></li>
-					<li><a href="#">Месяц</a></li>
-					<li><a href="#">Прошлый месяц</a></li>
-				</ul>
+
+<!-- BEGIN  main-->
+<div class="main">
+<!-- BEGIN .chart -->
+<div class="chart">
+
+	<!-- BEGIN .chart__top -->
+	<div class="chart__top">
+		<ul class="data-menu" role="data-menu"></ul>
+
+		<div class="select-date is-active">
+			<div class="select-date__in">
+				<span class="i_calendar"></span>
+				<strong class="date-interval">01.10.12 - 01.03.13</strong>
 			</div>
-			<!-- END .chart__top -->
+			<!-- BEGIN  cal-->
+			<div class="cal">
+				<div class="cal__shorthand">
+					<ul>
+						<li><a href="#">Сегодня</a></li>
 
-			<!-- BEGIN .chart__content -->
-			<div class="chart__content">
-				<!-- BEGIN .timeline -->
-				<div class="timeline">
-					<div class="tl__lm">
-						<a class="tl_less" href="#"></a>
-						<a class="tl_more" href="#"></a>
-					</div>
-					<div class="tl__graph">
-						<img src="images/tl.png" alt="" style="display:block;">
-						<div class="wiper_l"></div>
-						<div class="wiper_r"></div>
-						<div class="tl__sh_l"><a href="#" class="tl_left"></a></div>
-						<div class="tl__sh_r"><a href="#" class="tl_right"></a></div>
-						<div class="tl__arr"></div>
-					</div>
+						<li><a href="#">Вчера</a></li>
+
+						<li><a href="#">Неделя</a></li>
+
+						<li><a href="#">Месяц</a></li>
+
+						<li><a href="#">Прошлый месяц</a></li>
+
+						<li><a href="#">Квартал</a></li>
+
+						<li><a href="#">Год</a></li>
+
+						<li><a href="#">Все время</a></li>
+					</ul>
 				</div>
-				<!-- END .timeline -->
-
-				<!-- BEGIN .graph -->
-				<div class="graph">
-					<h1 class="graph__title">График просмотров</h1>
-					<img src="images/graph-01.png" alt="" class="graph__img">
-					<a href="#" class="btn-compare">Сравнение графиков</a>
-					<strong class="graph__all-result">Всего: 12 476 348 523</strong>
-					<div class="markers">
-						<div class="marker">
-							<span class="marker__color" style="background: #b0db07; border-color:#8cb206;"></span>
-							<span class="marker__text">Итого</span>
-							<span class="marker__close"></span>
-							<span class="marker__arr"></span>
-						</div>
-						<div class="marker">
-							<span class="marker__color" style="background: #b0db07; border-color:#8cb206;"></span>
-							<span class="marker__text">Реклама для каналов</span>
-							<span class="marker__close"></span>
-							<span class="marker__arr"></span>
-						</div>
-						<div class="marker">
-							<span class="marker__color" style="background: #ef785e; border-color:#cb6650;"></span>
-							<span class="marker__text">Colins Collection</span>
-							<span class="marker__close"></span>
-							<span class="marker__arr"></span>
-						</div>
-					</div>
+				<div class="cal__tt">
+					<table class="tt">
+						<thead>
+							<tr class="tt__month">
+								<th class="tt__prevm"><a href=""></a></th>
+								<th colspan="5" class="tt__monthname">c Октября 2012</th>
+								<th class="tt__nextm"><a href=""></a></th>
+							</tr>
+							<tr class="tt__days">
+								<th>Пн</th>
+								<th>Пн</th>
+								<th>Пн</th>
+								<th>Пн</th>
+								<th>Пн</th>
+								<th>Пн</th>
+								<th>Пн</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="is-disabled">25</td>
+								<td class="is-disabled">25</td>
+								<td class="is-disabled">25</td>
+								<td class="is-disabled">25</td>
+								<td class="is-disabled">25</td>
+								<td class="is-disabled">25</td>
+								<td class="is-disabled">25</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td>4</td>
+								<td>5</td>
+								<td>6</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td class="is-selected">8</td>
+								<td class="is-selected">8</td>
+								<td class="is-selected">8</td>
+								<td class="is-selected">8</td>
+								<td class="is-selected">8</td>
+								<td class="is-selected">8</td>
+								<td class="is-selected">8</td>
+							</tr>
+							<tr>
+								<td class="is-disabled is-selected">8</td>
+								<td class="is-disabled is-selected">8</td>
+								<td class="is-disabled is-selected">8</td>
+								<td class="is-disabled is-selected">8</td>
+								<td class="is-disabled is-selected">8</td>
+								<td class="is-disabled is-selected">8</td>
+								<td class="is-disabled is-selected">8</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td>4</td>
+								<td>5</td>
+								<td>6</td>
+								<td>7</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-				<!-- END .graph -->
-			</div>
-			<!-- END .chart__content -->
-		</div>
-		<!-- END .chart -->
-
-		<!-- BEGIN  table-inf-->
-		<div class="table-inf">
-			<!-- BEGIN  table-inf__top-->
-			<div class="table-inf__top">
-				<ul class="choice-tabs">
-					<li class="active"><a href="#">Все кампании</a></li>
-					<li><a href="#" class="btn_num">Выбранные <span class="btn__num">5</span></a></li>
-				</ul>
-				<strong class="table-inf__title">Отметьте кампанию в таблице ниже и она появится на графике.</strong>
-				<a href="#" class="btn_ico"><span class="two-arr"></span></a>
-				<a href="#" class="btn">Составить отчет</a>
-				<div class="two-btn">
-					<a href="#" class="btn_ico"><span class="btn__plus"></span></a>
-					<a href="#" class="btn btn_num">Оповещения<span class="btn__num">5</span></a>
-				</div>
-			</div>
-			<!-- END table-inf__top-->
-
-			<!-- BEGIN  table-inf__top-->
-			<div class="table-inf__top">
-				<ul class="choice-tabs">
-					<li class="active"><a href="#">Площадки</a></li>
-					<li><a href="#">Страны</a></li>
-				</ul>
-				<ul class="choice-tabs">
-					<li class="active"><a href="#">Все кампании</a></li>
-					<li><a href="#" class="btn_num">Выбранные <span class="btn__num">5</span></a></li>
-				</ul>
-				<a href="#" class="btn_ico"><span class="two-arr"></span></a>
-				<a href="#" class="btn">Составить отчет</a>
-				<div class="two-btn">
-					<a href="#" class="btn_ico"><span class="btn__plus"></span></a>
-					<a href="#" class="btn btn_num">Оповещения<span class="btn__num">5</span></a>
-				</div>
-			</div>
-			<!-- END table-inf__top-->
-
-			<!-- BEGIN  table-holder-->
-			<div class="t">
-				<table class="t_head">
-					<tr>
-						<th rowspan="2" class="t__col1"><input type="checkbox" class="checkbox"></th>
-						<th rowspan="2" class="t__col2">
-							<div class="t_switch">
-								Кампания
-								<span class="t__arrows">
-									<span class="t__arr_t2"></span>
-									<span class="t__arr_b2"></span>
-								</span>
-							</div>
-						</th>
-						<th colspan="2" class="t__y">2012</th>
-						<th colspan="4" class="t__y">2013</th>
-						<th rowspan="2" class="t__col9">
-							<div class="t_switch">
-								Среднее
-								<span class="t__arrows">
-									<span class="t__arr_t"></span>
-									<span class="t__arr_b"></span>
-								</span>
-							</div>
-						</th>
-						<th rowspan="2" class="t__col10">
-							<div class="t_switch">
-								Всего
-								<span class="t__arrows">
-									<span class="t__arr_t"></span>
-									<span class="t__arr_b"></span>
-								</span>
-							</div>
-						</th>
-					</tr>
-					<tr>
-						<th class="t__col3">Октябрь</th>
-						<th class="t__col4">Ноябрь</th>
-						<th class="t__col5">Декабрь</th>
-						<th class="t__col6">Январь</th>
-						<th class="t__col7">Февраль</th>
-						<th class="t__col8">Март</th>
-					</tr>
-				</table>
-				<div class="t_body-holder">
-					<table class="t_body">
-						<tr>
-							<td class="t__col1"><input type="checkbox" class="checkbox"></td>
-							<td class="t__col2">Colins Collection</td>
-							<td class="t__col3"><span class="t__mark">3 465 436</span></td>
-							<td class="t__col4">3 324 578</td>
-							<td class="t__col5">8 634 894</td>
-							<td class="t__col6">6 743 734</td>
-							<td class="t__col7">45 384 358</td>
-							<td class="t__col8">90 564 085</td>
-							<td class="t__col9">56 856 489</td>
-							<td class="t__col10">67 634 357</td>
-						</tr>
-						<tr>
-							<td class="t__col1"><input type="checkbox" class="checkbox"></td>
-							<td class="t__col2">Ipad Ad</td>
-							<td class="t__col3">456 456</td>
-							<td class="t__col4">8 853 564</td>
-							<td class="t__col5"><span class="t__mark">854 748</span></td>
-							<td class="t__col6">999 343</td>
-							<td class="t__col7">678 678</td>
-							<td class="t__col8">684 586 54</td>
-							<td class="t__col9">324 235</td>
-							<td class="t__col10">45 645 654</td>
-						</tr>
-						<tr>
-							<td class="t__col1"><input type="checkbox" class="checkbox"></td>
-							<td class="t__col2">Microsoft Surface</td>
-							<td class="t__col3">45 665</td>
-							<td class="t__col4">7 747 457</td>
-							<td class="t__col5">854 748</td>
-							<td class="t__col6">32 489 253</td>
-							<td class="t__col7">34 854 383</td>
-							<td class="t__col8">543 346</td>
-							<td class="t__col9">334 456 576</td>
-							<td class="t__col10">44 335 465</td>
-						</tr>
-						<tr class="t__row_mid">
-							<td class="t__col1"><input type="checkbox" class="checkbox"></td>
-							<td class="t__col2">Среднее</td>
-							<td class="t__col3">347 694</td>
-							<td class="t__col4">99 546 433</td>
-							<td class="t__col5">587 568 569</td>
-							<td class="t__col6">3 049 574</td>
-							<td class="t__col7">3 577 849</td>
-							<td class="t__col8">5 464 564</td>
-							<td class="t__col9">--------</td>
-							<td class="t__col10">2 123 453</td>
-						</tr>
-						<tr class="t__row_all">
-							<td class="t__col1"><input type="checkbox" class="checkbox"></td>
-							<td class="t__col2">Итого</td>
-							<td class="t__col3">2 985 749</td>
-							<td class="t__col4">49 38 572</td>
-							<td class="t__col5">56 756 756</td>
-							<td class="t__col6">3 049 574</td>
-							<td class="t__col7">54 686 585</td>
-							<td class="t__col8">2 123 453</td>
-							<td class="t__col9">--------</td>
-							<td class="t__col10">5 645 656</td>
-						</tr>
+				<div class="cal__tt">
+					<table class="tt">
+						<thead>
+							<tr class="tt__month">
+								<th class="tt__prevm"><a href=""></a></th>
+								<th colspan="5" class="tt__monthname">c Октября 2012</th>
+								<th class="tt__nextm"><a href=""></a></th>
+							</tr>
+							<tr class="tt__days">
+								<th>Пн</th>
+								<th>Пн</th>
+								<th>Пн</th>
+								<th>Пн</th>
+								<th>Пн</th>
+								<th>Пн</th>
+								<th>Пн</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="is-disabled">25</td>
+								<td class="is-disabled">25</td>
+								<td class="is-disabled">25</td>
+								<td class="is-disabled">25</td>
+								<td class="is-disabled">25</td>
+								<td class="is-disabled">25</td>
+								<td class="is-disabled">25</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td>4</td>
+								<td>5</td>
+								<td>6</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td class="is-selected">8</td>
+								<td class="is-selected">8</td>
+								<td class="is-selected">8</td>
+								<td class="is-selected">8</td>
+								<td class="is-selected">8</td>
+								<td class="is-selected">8</td>
+								<td class="is-selected">8</td>
+							</tr>
+							<tr>
+								<td class="is-disabled is-selected">8</td>
+								<td class="is-disabled is-selected">8</td>
+								<td class="is-disabled is-selected">8</td>
+								<td class="is-disabled is-selected">8</td>
+								<td class="is-disabled is-selected">8</td>
+								<td class="is-disabled is-selected">8</td>
+								<td class="is-disabled is-selected">8</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td>4</td>
+								<td>5</td>
+								<td>6</td>
+								<td>7</td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 			</div>
-			<!-- END table-holder-->
+			<!-- END cal-->
+			
+		</div>
+		<div class="devider"></div>
+		<!-- <ul class="date-menu">
+			<li class="active"><a href="#">Сегодня</a></li>
+			<li><a href="#">Вчера</a></li>
+			<li><a href="#">Неделя</a></li>
+			<li><a href="#">Месяц</a></li>
+			<li><a href="#">Прошлый месяц</a></li>
+		</ul> -->
+		<dl class="detalisation">
+			
+			<dt class="detalisation__value">Автоматически</dt>
+			<dd class="detalisation__drop">
+				<ul>
+					<li>По часам</li>
+					<li>По дням</li>
+					<li class="is-active">По неделям</li>
+					<li>По месяцам</li>
+					<li>По годоам</li>
+				</ul>
+			</dd>
+			
+		</dl>
+		<dl class="detalisation is-dropped">
+			
+			<dt class="detalisation__value">Автоматически</dt>
+			<dd class="detalisation__drop">
+				<ul>
+					<li>По часам</li>
+					<li>По дням</li>
+					<li class="is-active">По неделям</li>
+					<li>По месяцам</li>
+					<li>По годоам</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+	<!-- END .chart__top -->
 
+	<!-- BEGIN .chart__content -->
+	<div class="chart__content">
+		<!-- BEGIN .timeline -->
+		<div class="timeline">
+			<div class="tl__lm">
+				<a class="tl_less" href="#"></a>
+				<a class="tl_more" href="#"></a>
+			</div>
+			<div class="tl__graph">
+				<img src="images/tl.png" alt="" style="display:block;">
+				<div class="wiper_l"></div>
+				<div class="wiper_r"></div>
+				<div class="tl__sh_l"><a href="#" class="tl_left"></a></div>
+				<div class="tl__sh_r"><a href="#" class="tl_right"></a></div>
+				<div class="tl__arr"></div>
+			</div>
 		</div>
-		<!-- END table-inf-->
+		<!-- END .timeline -->
+
+		<!-- BEGIN .graph -->
+		<div class="graph" role="chart"></div>
+		<!-- END .graph -->
 	</div>
-	<!-- END main-->
-	<div class="lang">
-		<div class="lang__arr"></div>
-		<div class="lang__selected">
-			<img src="images/fl_ru.png" alt="ru">
+	<!-- END .chart__content -->
+</div>
+<!-- END .chart -->
+
+<!-- BEGIN  table-inf-->
+<div class="table-inf">
+	<!-- BEGIN  table-inf__top-->
+	<div class="table-inf__top" role="table-top">
+		<ul class="choice-tabs">
+			<li class="active" role="show-all"><a href="#">Все кампании</a></li>
+			<li role="show-checked"><a href="#" class="btn_num">Выбранные <span class="btn__num" role="checked-count">0</span></a></li>
+		</ul>
+		
+		<div class="wrapbtns">
+			<a href="#" class="btn_ico"><span class="two-arr"></span></a>
+			<a href="#" class="btn">Составить отчет</a>
+			<div class="two-btn">
+				<a href="#" class="btn_ico"><span class="btn__plus"></span></a>
+				<a href="#" class="btn btn_num">Оповещения<span class="btn__num">5</span></a>
+			</div>
 		</div>
+		<strong class="table-inf__title">Отметьте кампанию в таблице ниже и она появится на графике.</strong>
 	</div>
+	<!-- END table-inf__top-->
+
+	<!-- BEGIN  table-inf__top-->
+	<!--<div class="table-inf__top">-->
+		<!--<ul class="choice-tabs">-->
+			<!--<li class="active"><a href="#">Площадки</a></li>-->
+			<!--<li><a href="#">Страны</a></li>-->
+		<!--</ul>-->
+		<!--<ul class="choice-tabs">-->
+			<!--<li class="active"><a href="#">Все кампании</a></li>-->
+			<!--<li><a href="#" class="btn_num">Выбранные <span class="btn__num">5</span></a></li>-->
+		<!--</ul>-->
+		<!--<a href="#" class="btn_ico"><span class="two-arr"></span></a>-->
+		<!--<a href="#" class="btn">Составить отчет</a>-->
+		<!--<div class="two-btn">-->
+			<!--<a href="#" class="btn_ico"><span class="btn__plus"></span></a>-->
+			<!--<a href="#" class="btn btn_num">Оповещения<span class="btn__num">5</span></a>-->
+		<!--</div>-->
+	<!--</div>-->
+	<!-- END table-inf__top-->
+
+	<!-- BEGIN  table-holder-->
+	<div class="t" role="table">
+		<table class="t_head" role="table-head">
+			<thead>
+			<tr>
+				<th rowspan="2" class="t__col1"><input type="checkbox" class="checkbox" role="check-all"></th>
+				<th rowspan="2" class="t__col2">
+					<div role="sort-by-name">
+						Кампания
+						<span class="t__arrows">
+							<span class="t__arr_t2" role="reverse"></span>
+							<span class="t__arr_b2" role="direct"></span>
+						</span>
+					</div>
+				</th>
+				<th colspan="2" class="t__y">2012</th>
+				<th colspan="4" class="t__y">2013</th>
+				<th rowspan="2" class="t__col9">
+					<div>
+						Среднее
+								<span class="t__arrows">
+									<span class="t__arr_t"></span>
+									<span class="t__arr_b"></span>
+								</span>
+					</div>
+				</th>
+				<th rowspan="2" class="t__col10">
+					<div>
+						Всего
+								<span class="t__arrows">
+									<span class="t__arr_t"></span>
+									<span class="t__arr_b"></span>
+								</span>
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<th class="t__col3">Октябрь</th>
+				<th class="t__col4">Ноябрь</th>
+				<th class="t__col5">Декабрь</th>
+				<th class="t__col6">Январь</th>
+				<th class="t__col7">Февраль</th>
+				<th class="t__col8">Март</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="t__col1"><input type="checkbox" class="checkbox"></td>
+					<td class="t__col2">Colins Collection</td>
+					<td class="t__col3"><span class="t__mark">3 465 436</span></td>
+					<td class="t__col4">3 324 578</td>
+					<td class="t__col5">8 634 894</td>
+					<td class="t__col6">6 743 734</td>
+					<td class="t__col7">45 384 358</td>
+					<td class="t__col8">90 564 085</td>
+					<td class="t__col9">56 856 489</td>
+					<td class="t__col10">67 634 357</td>
+				</tr>
+				<tr>
+					<td class="t__col1"><input type="checkbox" class="checkbox"></td>
+					<td class="t__col2">Ipad Ad</td>
+					<td class="t__col3">456 456</td>
+					<td class="t__col4">8 853 564</td>
+					<td class="t__col5"><span class="t__mark">854 748</span></td>
+					<td class="t__col6">999 343</td>
+					<td class="t__col7">678 678</td>
+					<td class="t__col8">684 586 54</td>
+					<td class="t__col9">324 235</td>
+					<td class="t__col10">45 645 654</td>
+				</tr>
+				<tr>
+					<td class="t__col1"><input type="checkbox" class="checkbox"></td>
+					<td class="t__col2">Microsoft Surface</td>
+					<td class="t__col3">45 665</td>
+					<td class="t__col4">7 747 457</td>
+					<td class="t__col5">854 748</td>
+					<td class="t__col6">32 489 253</td>
+					<td class="t__col7">34 854 383</td>
+					<td class="t__col8">543 346</td>
+					<td class="t__col9">334 456 576</td>
+					<td class="t__col10">44 335 465</td>
+				</tr>
+				<tr class="t__row_mid">
+					<td class="t__col1"><input type="checkbox" class="checkbox"></td>
+					<td class="t__col2">Среднее</td>
+					<td class="t__col3">347 694</td>
+					<td class="t__col4">99 546 433</td>
+					<td class="t__col5">587 568 569</td>
+					<td class="t__col6">3 049 574</td>
+					<td class="t__col7">3 577 849</td>
+					<td class="t__col8">5 464 564</td>
+					<td class="t__col9">--------</td>
+					<td class="t__col10">2 123 453</td>
+				</tr>
+				<tr class="t__row_all">
+					<td class="t__col1"><input type="checkbox" class="checkbox"></td>
+					<td class="t__col2">Итого</td>
+					<td class="t__col3">2 985 749</td>
+					<td class="t__col4">49 38 572</td>
+					<td class="t__col5">56 756 756</td>
+					<td class="t__col6">3 049 574</td>
+					<td class="t__col7">54 686 585</td>
+					<td class="t__col8">2 123 453</td>
+					<td class="t__col9">--------</td>
+					<td class="t__col10">5 645 656</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="t_body-holder wrapper" role="scroll-wrapper"><div class="scroller"><div class="container">
+			<table class="t_body" role="rows">
+				<tr>
+					<td class="t__col1"><input type="checkbox" class="checkbox"></td>
+					<td class="t__col2">Colins Collection</td>
+					<td class="t__col3"><span class="t__mark">3 465 436</span></td>
+					<td class="t__col4">3 324 578</td>
+					<td class="t__col5">8 634 894</td>
+					<td class="t__col6">6 743 734</td>
+					<td class="t__col7">45 384 358</td>
+					<td class="t__col8">90 564 085</td>
+					<td class="t__col9">56 856 489</td>
+					<td class="t__col10">67 634 357</td>
+				</tr>
+				<tr>
+					<td class="t__col1"><input type="checkbox" class="checkbox"></td>
+					<td class="t__col2">Ipad Ad</td>
+					<td class="t__col3">456 456</td>
+					<td class="t__col4">8 853 564</td>
+					<td class="t__col5"><span class="t__mark">854 748</span></td>
+					<td class="t__col6">999 343</td>
+					<td class="t__col7">678 678</td>
+					<td class="t__col8">684 586 54</td>
+					<td class="t__col9">324 235</td>
+					<td class="t__col10">45 645 654</td>
+				</tr>
+				<tr>
+					<td class="t__col1"><input type="checkbox" class="checkbox"></td>
+					<td class="t__col2">Microsoft Surface</td>
+					<td class="t__col3">45 665</td>
+					<td class="t__col4">7 747 457</td>
+					<td class="t__col5">854 748</td>
+					<td class="t__col6">32 489 253</td>
+					<td class="t__col7">34 854 383</td>
+					<td class="t__col8">543 346</td>
+					<td class="t__col9">334 456 576</td>
+					<td class="t__col10">44 335 465</td>
+				</tr>
+				<tr class="t__row_mid">
+					<td class="t__col1"><input type="checkbox" class="checkbox"></td>
+					<td class="t__col2">Среднее</td>
+					<td class="t__col3">347 694</td>
+					<td class="t__col4">99 546 433</td>
+					<td class="t__col5">587 568 569</td>
+					<td class="t__col6">3 049 574</td>
+					<td class="t__col7">3 577 849</td>
+					<td class="t__col8">5 464 564</td>
+					<td class="t__col9">--------</td>
+					<td class="t__col10">2 123 453</td>
+				</tr>
+				<tr class="t__row_all">
+					<td class="t__col1"><input type="checkbox" class="checkbox"></td>
+					<td class="t__col2">Итого</td>
+					<td class="t__col3">2 985 749</td>
+					<td class="t__col4">49 38 572</td>
+					<td class="t__col5">56 756 756</td>
+					<td class="t__col6">3 049 574</td>
+					<td class="t__col7">54 686 585</td>
+					<td class="t__col8">2 123 453</td>
+					<td class="t__col9">--------</td>
+					<td class="t__col10">5 645 656</td>
+				</tr>
+			</table>
+		</div><div class="scroller__bar-wrapper"><div class="scroller__bar"></div></div></div></div>
+	</div>
+	<!-- END table-holder-->
+
+</div>
+<!-- END table-inf-->
+</div>
+<!-- END main-->
+<div class="lang">
+	<div class="lang__arr"></div>
+	<div class="lang__selected">
+		<img src="images/fl_ru.png" alt="ru">
+	</div>
+</div>
 </div>
 <!-- END out-->
 
-
+<!-- Latest before </body>!!! -->
+<script src="scripts/config.js"></script>
+<script data-main="analytics-main" src="scripts/lib/requirejs/require.js"></script>
 </body>
 </html>

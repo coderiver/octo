@@ -3,13 +3,18 @@ window.require =
 
 	paths:
 		# Libraries
-		$: 'lib/jquery-1.9.1'
+		$: 'lib/jquery/jquery-1.9.1'
 		_: 'lib/lodash'
 		Backbone: 'lib/backbone'
+		Highcharts: 'lib/Highcharts-2.3.5/js/highcharts.src'
+		moment: 'lib/moment'
 
 		# Requirejs's plugins
 		text: 'lib/requirejs/text'
 		tpl: 'lib/requirejs/tpl'
+
+		# jQuery's plugins
+		jquery_role: 'lib/jquery/jquery.role'
 
 		# Templates path
 		templates: '../templates'
@@ -21,6 +26,9 @@ window.require =
 			underscore: '_'
 			backbone: 'Backbone'
 			jquery: '$'
+			Collection: 'core/collection'
+			View: 'core/view'
+			Model: 'core/model'
 
 
 	# Not AMD modules
@@ -32,3 +40,9 @@ window.require =
 		$:
 			exports: 'jQuery'
 
+		Highcharts:
+			deps: ['$']
+			exports: 'Highcharts'
+
+		jquery_role:
+			deps: ['$']
